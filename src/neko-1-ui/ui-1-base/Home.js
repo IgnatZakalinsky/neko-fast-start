@@ -2,7 +2,7 @@ import React from 'react';
 import NewComponentContainer from "../ui-3-new-components/NewComponentContainer";
 import {LOGIC_SEND_MESSAGE, LOGIC_SENDING, LOGIC_SUCCESS} from "../../neko-2-bll/bll-1-base/initialState";
 
-const Home = ({data = 'no data', testState}) => {
+const Home = ({data = 'no data', testState, testCallbacks}) => {
     console.log('pageData: ', data);
 
     return (
@@ -22,9 +22,9 @@ const Home = ({data = 'no data', testState}) => {
 
             {/*test content*/}
 
-            <input value={testState.url}/>
-            <textarea value={testState.toServerData}/>
-            <button>get</button>
+            <input value={testState.url} onChange={e => testCallbacks.setUrl(e.currentTarget.value)}/>
+            <textarea value={testState.toServerData} onChange={e => testCallbacks.setToServerData(e.currentTarget.value)}/>
+            <button onClick={testCallbacks.sendData}>get</button>
             {testState.logicState === LOGIC_SEND_MESSAGE ? 'send message...'
                 : testState.logicState === LOGIC_SENDING ? 'sending...'
                 : testState.logicState === LOGIC_SUCCESS ? 'SUCCESS: answer in console'
