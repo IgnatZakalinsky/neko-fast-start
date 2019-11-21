@@ -1,4 +1,5 @@
 import React from 'react';
+import NewComponentContainer from "../ui-3-new-components/NewComponentContainer";
 
 const Home = ({data = 'no data'}) => {
     console.log('pageData: ', data);
@@ -14,6 +15,7 @@ const Home = ({data = 'no data'}) => {
             }}
         >
             {/*test content*/}
+            <NewComponentContainer data={data}/>
 
 
 
@@ -22,7 +24,7 @@ const Home = ({data = 'no data'}) => {
             <input/>
             <textarea/>
             <button>get</button>
-            send message... / SUCCESS: answer in console / ERROR: message in console
+            send message... / sending... / SUCCESS: answer in console / ERROR: message in console
         </div>
     );
 };

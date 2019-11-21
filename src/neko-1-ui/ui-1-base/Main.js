@@ -1,6 +1,6 @@
 import React from 'react';
 import Routes from "./Routes";
-import DevHeader from "../ui-dev/DevHeader";
+import DevHeader from "../ui-2-dev/DevHeader";
 
 const Main = () => {
     return (
