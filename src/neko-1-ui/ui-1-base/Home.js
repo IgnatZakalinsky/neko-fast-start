@@ -3,7 +3,9 @@ import NewComponentContainer from "../ui-3-new-components/NewComponentContainer"
 import {LOGIC_SEND_MESSAGE, LOGIC_SENDING, LOGIC_SUCCESS} from "../../neko-2-bll/bll-1-base/initialState";
 
 const Home = ({data = 'no data', testState, testCallbacks}) => {
-    console.log('pageData: ', data);
+    console.log('HomePageData: ', data);
+    console.log('HomeTestState: ', testState);
+    console.log('HomeTestCallbacks: ', testCallbacks);
 
     return (
         <div

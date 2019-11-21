@@ -1,4 +1,4 @@
-import {initialState} from "./initialState";
+import {initialState, LOGIC_SEND_MESSAGE, LOGIC_SUCCESS} from "./initialState";
 import {
     SEND_DATA,
     SET_FROM_SERVER_DATA,
@@ -12,25 +12,28 @@ export const reducer = (state = initialState, action) => {
         case SET_URL: {
             return {
                 ...state,
-                url: action.url
+                url: action.url,
+                logicState: LOGIC_SEND_MESSAGE
             }
         }
         case SET_TO_SERVER_DATA: {
             return {
                 ...state,
-                toServerData: action.toServerData
+                toServerData: action.toServerData,
+                logicState: LOGIC_SEND_MESSAGE
             }
         }
         case SEND_DATA: {
             return {
                 ...state,
-
+                // reserve
             }
         }
         case SET_FROM_SERVER_DATA: {
             return {
                 ...state,
-                fromServerData: action.fromServerData
+                fromServerData: action.fromServerData,
+                logicState: LOGIC_SUCCESS
             }
         }
         case SET_LOGIC_STATE: {
