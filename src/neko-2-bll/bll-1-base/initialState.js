@@ -5,7 +5,10 @@ export const LOGIC_ERROR = 'TEST/LOGIC_ERROR';
 
 export const initialState = {
     url: 'http://localhost:3005/users',
-    toServerData: 'test data to server',
+    toServerData:
+`{
+    "login": "name"
+}`,
     fromServerData: 'test data from server',
     logicState: LOGIC_SEND_MESSAGE
 };

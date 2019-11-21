@@ -6,11 +6,10 @@ export const sendDataThunk = () => async (dispatch, getState) => {
     dispatch(setLogicState(LOGIC_SENDING));
     dispatch(sendData());
     try {
-        const response = await TestAPI.getTest(getState().testState.url);
-        // Promise.resolve({
-        //     url: getState().testState.url,
-        //     toServerData: getState().testState.toServerData
-        // });
+        const response = await TestAPI.getTest(
+            getState().testState.url,
+            JSON.parse(getState().testState.toServerData)
+        );
 
         console.warn('!!! Neko response !!! testResponse: ', response);
         dispatch(setFromServerData(response));

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const NewComponent = ({data = 'no data'}) => {
-    console.log('NewComponentData: ', data);
+    if (false) console.log('NewComponentData: ', data);
 
     return (
         <div
