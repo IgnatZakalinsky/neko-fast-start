@@ -4,7 +4,7 @@ export const LOGIC_SUCCESS = 'TEST/LOGIC_SUCCESS';
 export const LOGIC_ERROR = 'TEST/LOGIC_ERROR';
 
 export const initialState = {
-    url: 'test url',
+    url: 'http://localhost:3005/users',
     toServerData: 'test data to server',
     fromServerData: 'test data from server',
     logicState: LOGIC_SEND_MESSAGE

@@ -24,7 +24,7 @@ const Home = ({data = 'no data', testState, testCallbacks}) => {
 
             <input value={testState.url} onChange={e => testCallbacks.setUrl(e.currentTarget.value)}/>
             <textarea value={testState.toServerData} onChange={e => testCallbacks.setToServerData(e.currentTarget.value)}/>
-            <button onClick={testCallbacks.sendData}>get</button>
+            <button onClick={testCallbacks.sendDataThunk}>get</button>
             {testState.logicState === LOGIC_SEND_MESSAGE ? 'send message...'
                 : testState.logicState === LOGIC_SENDING ? 'sending...'
                 : testState.logicState === LOGIC_SUCCESS ? 'SUCCESS: answer in console'
