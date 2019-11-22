@@ -1,7 +1,7 @@
 import {applyMiddleware, combineReducers, createStore} from "redux";
 import  thunkMiddleware from "redux-thunk"
-import {reducer} from "./reducer";
-import {newReducer} from "../bll-3-new/new-base/newReducer";
+import {reducer} from "./bll-1-base/reducer";
+import {newReducer} from "../neko-4-new/new-2-bll/new-base/newReducer";
 
 const reducers = combineReducers({
     testState: reducer,

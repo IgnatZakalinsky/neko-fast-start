@@ -1,8 +1,8 @@
 import React from 'react';
 import NewComponent from "./NewComponent";
 import {useSelector} from "react-redux";
-import {selectNewState} from "../../neko-2-bll/bll-3-new/new-base/newSelectors";
-import {useNewCallbacks} from "../../neko-2-bll/bll-3-new/new-logic/useNewCallbacks";
+import {selectNewState} from "../new-2-bll/new-base/newSelectors";
+import {useNewCallbacks} from "../new-2-bll/new-logic/useNewCallbacks";
 
 const NewComponentContainer = ({data = 'no data'}) => {
     const newState = useSelector(selectNewState);

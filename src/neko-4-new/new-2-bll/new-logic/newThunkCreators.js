@@ -1,5 +1,5 @@
 import {setData} from "./newActionCreators";
-import {NewAPI} from "../../../neko-3-dal/newApi";
+import {NewAPI} from "../../new-3-dal/newApi";
 
 export const sendNewDataThunk = () => async (dispatch, getState) => {
     const data = getState().newState.data;

@@ -3,7 +3,7 @@ import './App.css';
 import Main from "./neko-1-ui/ui-1-base/Main";
 import {BrowserRouter} from "react-router-dom";
 import {Provider} from "react-redux";
-import store from "./neko-2-bll/bll-1-base/store";
+import store from "./neko-2-bll/store";
 
 // global context
 const App = () => {

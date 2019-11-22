@@ -1,5 +1,5 @@
-import {TestAPI} from "./testApi";
-import {METHOD_GET} from "../neko-2-bll/bll-1-base/initialState";
+import {TestAPI} from "../../neko-3-dal/testApi";
+import {METHOD_GET} from "../../neko-2-bll/bll-1-base/initialState";
 
 export const NewAPI = {
     getSome(data) {

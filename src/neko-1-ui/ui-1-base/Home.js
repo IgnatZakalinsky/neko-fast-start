@@ -1,5 +1,5 @@
 import React from 'react';
-import NewComponentContainer from "../ui-3-new-components/NewComponentContainer";
+import NewComponentContainer from "../../neko-4-new/new-1-ui/NewComponentContainer";
 import {
     LOGIC_SEND_MESSAGE,
     LOGIC_SENDING,
