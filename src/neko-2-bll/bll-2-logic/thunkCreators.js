@@ -17,5 +17,4 @@ export const sendDataThunk = () => async (dispatch, getState) => {
         dispatch(setLogicState(LOGIC_ERROR));
         console.error('!!! Neko error !!! testError: ', e)
     }
-
 };

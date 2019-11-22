@@ -28,7 +28,7 @@ const Home = ({data = 'no data', testState, testCallbacks}) => {
 
             <input value={testState.url} onChange={e => testCallbacks.setUrl(e.currentTarget.value)}/>
             <textarea
-                style={{width: '500px', height: '350px'}}
+                style={{width: '500px', height: '200px'}}
                 value={testState.toServerData
                 } onChange={e => testCallbacks.setToServerData(e.currentTarget.value)}
             />

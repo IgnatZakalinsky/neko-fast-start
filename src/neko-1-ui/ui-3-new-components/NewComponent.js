@@ -1,6 +1,6 @@
 import React from 'react';
 
-const NewComponent = ({data = 'no data'}) => {
+const NewComponent = ({data = 'no data', newState}) => {
     if (false) console.log('NewComponentData: ', data);
 
     return (
@@ -16,7 +16,7 @@ const NewComponent = ({data = 'no data'}) => {
             <div>New content [</div>
             {/*test content*/}
 
-
+            {newState.data}
 
             {/*test content*/}
             <div>]</div>
