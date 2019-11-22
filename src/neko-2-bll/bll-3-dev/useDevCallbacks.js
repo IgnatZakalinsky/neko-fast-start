@@ -1,13 +1,19 @@
 import {useDispatch} from "react-redux";
 import {useMemo} from "react"
-import {devGet} from "./devGet";
-import {devPost} from "./devPost";
+import {useDevGet} from "./useDevGet";
+import {useDevPost} from "./useDevPost";
+import {useDevPut} from "./useDevPut";
 
 export const useDevCallbacks = () => {
     const dispatch = useDispatch();
 
+    const devGet = useDevGet(dispatch);
+    const devPost = useDevPost(dispatch);
+    const devPut = useDevPut(dispatch);
+
     return useMemo(() => ({
-        devGet: () => devGet(dispatch),
-        devPost: () => devPost(dispatch),
-    }), [dispatch])
+        devGet,
+        devPost,
+        devPut
+    }), [devGet, devPost, devPut])
 };
