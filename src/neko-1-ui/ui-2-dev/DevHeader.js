@@ -12,6 +12,7 @@ const DevHeader = ({devCallbacks}) => {
             <NavLink to='/test-params'>Home with params</NavLink>
             <NavLink to='/test-params/test-error'>Error page</NavLink>
             <button onClick={devCallbacks.devGet}>DevGet</button>
+            <button onClick={devCallbacks.devPost}>devPost</button>
         </div>
     );
 };
