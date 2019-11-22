@@ -6,7 +6,7 @@ export const NewAPI = {
         // some url
         let url = 'http://localhost:3005/' + data;
 
-        return TestAPI.getTest(url, {}, METHOD_GET)
+        return TestAPI.sendData(url, {}, METHOD_GET)
     }
 
 };
