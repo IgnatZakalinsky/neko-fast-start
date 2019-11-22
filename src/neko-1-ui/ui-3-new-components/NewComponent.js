@@ -21,6 +21,7 @@ const NewComponent = ({data = 'no data', newState, newCallbacks}) => {
             {/*test content*/}
 
             <input value={newState.data} onChange={e => newCallbacks.setData(e.currentTarget.value)}/>
+            <button onClick={newCallbacks.sendNewDataThunk}>new</button>
 
             {/*test content*/}
             <div>]</div>
