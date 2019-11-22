@@ -20,6 +20,7 @@ const NewComponent = ({data = 'no data', newState, newCallbacks}) => {
             <div>New content [</div>
             {/*test content*/}
 
+            GET: `http://localhost:3005/ + ${'{'}{'String(data)'}{'}'}`
             <input value={newState.data} onChange={e => newCallbacks.setData(e.currentTarget.value)}/>
             <button onClick={newCallbacks.sendNewDataThunk}>new</button>
 

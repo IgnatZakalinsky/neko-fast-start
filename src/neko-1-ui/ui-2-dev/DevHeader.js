@@ -14,6 +14,7 @@ const DevHeader = ({devCallbacks}) => {
             <button onClick={devCallbacks.devGet}>DevGet</button>
             <button onClick={devCallbacks.devPost}>devPost</button>
             <button onClick={devCallbacks.devPut}>devPut</button>
+            <button onClick={devCallbacks.devDelete}>devDelete</button>
         </div>
     );
 };
