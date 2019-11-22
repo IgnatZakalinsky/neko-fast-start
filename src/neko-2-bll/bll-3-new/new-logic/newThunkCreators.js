@@ -7,10 +7,10 @@ export const sendNewDataThunk = () => async (dispatch, getState) => {
     try {
         const response = await NewAPI.getSome(data);
 
-        console.warn('!!! Neko response !!! testResponse: ', response);
+        console.warn('!!! Neko response !!! nextResponse: ', response);
         dispatch(setData(response.status)); // set something
     } catch (e) {
         dispatch(setData('error!'));
-        console.error('!!! Neko error !!! testError: ', e)
+        console.error('!!! Neko error !!! nextError: ', e)
     }
 };

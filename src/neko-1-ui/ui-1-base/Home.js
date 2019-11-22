@@ -1,6 +1,11 @@
 import React from 'react';
 import NewComponentContainer from "../ui-3-new-components/NewComponentContainer";
-import {LOGIC_SEND_MESSAGE, LOGIC_SENDING, LOGIC_SUCCESS} from "../../neko-2-bll/bll-1-base/initialState";
+import {
+    LOGIC_SEND_MESSAGE,
+    LOGIC_SENDING,
+    LOGIC_SUCCESS,
+    METHOD_DELETE, METHOD_GET, METHOD_POST, METHOD_PUT
+} from "../../neko-2-bll/bll-1-base/initialState";
 
 const Home = ({data = 'no data', testState, testCallbacks}) => {
     if (false) {
@@ -26,13 +31,19 @@ const Home = ({data = 'no data', testState, testCallbacks}) => {
 
             {/*test content*/}
 
-            <input value={testState.url} onChange={e => testCallbacks.setUrl(e.currentTarget.value)}/>
+            <input value={testState.url} onChange={e => testCallbacks.setUrl(e.currentTarget.value)} style={{width: '500px'}}/>
+            <select value={testState.method} onChange={e => testCallbacks.setMethod(e.currentTarget.value)}>
+                <option value={METHOD_GET}>GET</option>
+                <option value={METHOD_POST}>POST</option>
+                <option value={METHOD_PUT}>PUT</option>
+                <option value={METHOD_DELETE}>DELETE</option>
+            </select>
             <textarea
                 style={{width: '500px', height: '200px'}}
                 value={testState.toServerData
                 } onChange={e => testCallbacks.setToServerData(e.currentTarget.value)}
             />
-            <button onClick={testCallbacks.sendDataThunk}>get</button>
+            <button onClick={testCallbacks.sendDataThunk}>Send data...</button>
             {testState.logicState === LOGIC_SEND_MESSAGE ? 'send message...'
                 : testState.logicState === LOGIC_SENDING ? 'sending...'
                 : testState.logicState === LOGIC_SUCCESS ? 'SUCCESS: answer in console'

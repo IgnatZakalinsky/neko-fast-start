@@ -2,7 +2,7 @@ import {initialState, LOGIC_SEND_MESSAGE, LOGIC_SUCCESS} from "./initialState";
 import {
     SEND_DATA,
     SET_FROM_SERVER_DATA,
-    SET_LOGIC_STATE,
+    SET_LOGIC_STATE, SET_METHOD,
     SET_TO_SERVER_DATA,
     SET_URL
 } from "../bll-2-logic/actionTypes";
@@ -42,7 +42,14 @@ export const reducer = (state = initialState, action) => {
                 logicState: action.logicState
             }
         }
+        case SET_METHOD: {
+            return {
+                ...state,
+                method: action.method
+            }
+        }
 
-        default: return state
+        default:
+            return state
     }
 };

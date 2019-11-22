@@ -1,12 +1,12 @@
-import * as axios from "axios";
+import {TestAPI} from "./testApi";
+import {METHOD_GET} from "../neko-2-bll/bll-1-base/initialState";
 
 export const NewAPI = {
     getSome(data) {
         // some url
-        let newData = 'http://localhost:3005/' + data;
+        let url = 'http://localhost:3005/' + data;
 
-        console.warn('!!! Neko GET !!! url: ', newData);
-        return axios.get(newData);
+        return TestAPI.getTest(url, {}, METHOD_GET)
     }
 
 };

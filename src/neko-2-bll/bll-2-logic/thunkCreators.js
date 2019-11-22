@@ -4,11 +4,12 @@ import {TestAPI} from "../../neko-3-dal/testApi";
 
 export const sendDataThunk = () => async (dispatch, getState) => {
     dispatch(setLogicState(LOGIC_SENDING));
-    dispatch(sendData());
+    dispatch(sendData()); // reserve
     try {
-        const response = await TestAPI.getTest(
+        const response = await TestAPI.sendData(
             getState().testState.url,
-            JSON.parse(getState().testState.toServerData)
+            JSON.parse(getState().testState.toServerData),
+            getState().testState.method
         );
 
         console.warn('!!! Neko response !!! testResponse: ', response);
