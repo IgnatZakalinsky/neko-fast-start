@@ -1,7 +1,7 @@
 import {applyMiddleware, combineReducers, createStore} from "redux";
 import  thunkMiddleware from "redux-thunk"
 import {reducer} from "./reducer";
-import {newReducer} from "./new/newReducer";
+import {newReducer} from "../bll-3-new/new-base/newReducer";
 
 const reducers = combineReducers({
     testState: reducer,

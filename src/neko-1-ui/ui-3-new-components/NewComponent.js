@@ -1,7 +1,11 @@
 import React from 'react';
 
-const NewComponent = ({data = 'no data', newState}) => {
-    if (false) console.log('NewComponentData: ', data);
+const NewComponent = ({data = 'no data', newState, newCallbacks}) => {
+    if (false) {
+        console.log('NewComponentData: ', data);
+        console.log('NewState: ', newState);
+        console.log('NewCallbacks: ', newCallbacks);
+    }
 
     return (
         <div
@@ -16,7 +20,7 @@ const NewComponent = ({data = 'no data', newState}) => {
             <div>New content [</div>
             {/*test content*/}
 
-            {newState.data}
+            <input value={newState.data} onChange={e => newCallbacks.setData(e.currentTarget.value)}/>
 
             {/*test content*/}
             <div>]</div>
